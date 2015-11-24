@@ -1,10 +1,10 @@
 class TodoItemsController < ApplicationController
 before_action :set_todo_list
-before_action :set_todo_item, except: [:create]
+before_action :set_todo_item, except: [:create, :new, :index]
 
-#this def index is still causing an error message
+
   def index
-    @todo_item = Todo.all
+    @todo_item = TodoItem.all
   end
 
   def create
@@ -27,9 +27,9 @@ before_action :set_todo_item, except: [:create]
   end
 
   private
-#this def is causing an error message 
+
   def set_todo_list
-    @todo_list = Todolist.find(params[:todo_list_id])
+    @todo_list = TodoList.find(params[:todo_list_id])
   end
 
   def set_todo_item
@@ -40,4 +40,6 @@ before_action :set_todo_item, except: [:create]
   def todo_item_params
     params[:todo_item].permit(:content)
   end
+
+
 end
