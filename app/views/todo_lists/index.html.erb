@@ -1,15 +1,14 @@
+
 <div class="jumbotron">
   <div class="container">
     <h1>Welcome!</h1>
     <p>Sign up to get started!</p>
     <p>
-      <%= link_to new_user_path, class: 'btn btn-primary btn-lg' do %>
-        Sign Up &raquo;
+      <%= link_to todo_list_todo_item_sign_in, class: 'btn btn-primary btn-lg' do %>
       <% end %>
     </p>
   </div>
 </div>
-
 
 <% @todo_lists.each do |todo_list| %>
   <div class="index_row clearfix"></div>
