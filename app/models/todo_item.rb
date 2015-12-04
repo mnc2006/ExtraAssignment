@@ -1,7 +1,7 @@
 class TodoItem < ActiveRecord::Base
   belongs_to :todo_list
 
-  def completed
+  def completed?
  !completed_at.blank?
   end
 

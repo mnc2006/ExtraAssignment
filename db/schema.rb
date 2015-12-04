@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151129202359) do
 
-  create_table "create_users", force: :cascade do |t|
-    t.string   "login"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "todo_items", force: :cascade do |t|
     t.string   "content"
     t.integer  "todo_list_id"

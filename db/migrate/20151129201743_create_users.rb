@@ -1,6 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
 
-  add_index :users, :email, unique: true 
+  add_index :users, :email, unique: true
+  
   def change
     create_table :users do |t|
       t.string :email
