@@ -12,7 +12,6 @@
   <div class="row">
     <div class=".col-xs-6 .col-md-4">
       <% @todo_lists.each do |todo_list| %>
-      <div class="index_row clearfix"></div>
         <h2 class="todo_list_title"><%= link_to todo_list.title, todo_list %></h2>
           <p class="todo_list_sub_title"><%= todo_list.description %></p>
         <%=render todo_list.todo_items, todo_list: todo_list  %>
@@ -21,7 +20,7 @@
 
       </div>
     </div>
-  
+
 
 <div class="links">
   <%= link_to "New Todo List", new_todo_list_path %>
