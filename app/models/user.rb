@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
     c.crypto_provider = Authlogic::CryptoProviders::Sha512
   end
 
+has_many :todo_items
 end
