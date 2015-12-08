@@ -9,16 +9,20 @@
   </div>
 </div>
 
-
+    <% if current_user %>
       <% current_user.todo_lists.each do |todo_list| %>
         <div class="col-xs-3"
         <h2 class="todo_list_title"><%= link_to todo_list.title, todo_list %></h2>
           <p class="todo_list_sub_title"><%= todo_list.description %></p>
         <%=render todo_list.todo_items, todo_list: todo_list  %>
+        <%=render "_todo_item" %>
 
-          <% end %>
+    <% end %>
 
 
 <div class="links">
   <%= link_to "New Todo List", new_todo_list_path %>
+
+  <% end %>
+
 </div>

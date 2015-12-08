@@ -8,7 +8,7 @@ before_action :set_todo_item, except: [:create, :new, :index]
   end
 
   def create
-    @todo_item = @todo_list.todo_items.create(todo_item_params)
+    @todo_item = @todo_list.todo_item.create(todo_item_params)
     @todo_item.save!
     redirect_to @todo_list
   end
